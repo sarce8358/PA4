@@ -14,7 +14,7 @@ public class Team
   public void setTeam()
   {
     System.out.printf("%nEnter the team type:  ");
-    teamType = input.nextLine();
+    teamType = input.nextLine().toLowerCase();
   }//END setTeam()
   
   public void setCoach()
