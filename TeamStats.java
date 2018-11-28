@@ -1,3 +1,8 @@
+/*
+ * PROGRAM PURPOSE: Calls upon Team program, processes wins and loses,
+ * and displays team statistics.
+ */
+
 import java.util.Scanner;
 public class TeamStats
 {
@@ -7,12 +12,16 @@ public class TeamStats
   private Scanner input = new Scanner(System.in);
   private Team[] myTeams = null;
   private Team team = new Team();
-  private static int teams = 0;
+  private int teams = 0;
   private String name = " ";
   
   //-------------------------------------declaring methods
   
   
+  /*
+   * start() Purpose: Asks user if they would like to start application
+   * or exits, depending on input.
+   */
   public void start()
   {
     /**
@@ -31,10 +40,13 @@ System.out.printf("Thank you! Exiting program.  ");
     
     }
     
-    
-    
   }//END start()
   
+  
+  /*
+   * processWinsLosses() Purpose: Calls upon Team program to receive
+   * user input.
+   */
   public void processWinsLosses()
   {
     /**
@@ -48,7 +60,7 @@ System.out.printf("Thank you! Exiting program.  ");
     teams = input.nextInt();
     Team[] myTeams = new Team[teams];
     
-    for(int i = 1; i <= teams; i++){
+    for(int i = 1; i <= myTeams.length; i++){
       
     
     
@@ -63,6 +75,12 @@ System.out.printf("Thank you! Exiting program.  ");
         displayTeamStats();
   }//END processWinsLosses()
   
+  
+  
+  /*
+   * displayTeamStats() Purpose: Displays all accumulated
+   * statistics about the teams.
+   */
   public void displayTeamStats()
   {
     /**
@@ -70,8 +88,10 @@ System.out.printf("Thank you! Exiting program.  ");
      */
     System.out.printf("%nTEAMS WIN-LOSS RECORD FOR %S", name);
     
-    for(int i = 1; i <= teams; i++){
-    System.out.printf("%n%nTeam: %s"
+    for(int i = 0; i <= teams; i++){
+    
+
+      System.out.printf("%n%nTeam: %s"
                         + "%nCoach: %s"
                         + "%nTotal Games: %d"
                         + "%nNo. of Wins: %d"
