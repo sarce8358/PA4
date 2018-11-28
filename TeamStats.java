@@ -4,8 +4,10 @@ public class TeamStats
   /**
    * create 1D array at the class level called myTeams at the class level as a null array the type will be Team
    */
-  private static Scanner input = new Scanner(System.in);
+  private Scanner input = new Scanner(System.in);
   private Team[] myTeams = null;
+  private Team team = new Team();
+  private static int teams = 0;
   
   //-------------------------------------declaring methods
   
@@ -18,13 +20,13 @@ public class TeamStats
      * if answer is "No" then print message "Thank you! Exiting program."
      */
     System.out.printf("%nDo you want to track the performance of the athletic "
-                        + "teams at your school?  Enter 'Y' or 'N':  ");
+                        + "teams at your school?  Enter 'Y' or 'N': ");
     char ans = input.nextLine().charAt(0);
     
     if(Character.toUpperCase(ans) == 'Y') {
       processWinsLosses();
     } else if (Character.toUpperCase(ans) == 'N') {
-System.out.printf("Thank you! Exiting program.");
+System.out.printf("Thank you! Exiting program.  ");
     
     }
     
@@ -38,12 +40,26 @@ System.out.printf("Thank you! Exiting program.");
      * prmot user on number of teams that they would like to track. this number will be used to make the size of the 
      * myTeams array.
      */
-    System.out.printf("%nWhat is the name of your school?");
+    System.out.printf("%nWhat is the name of your school?  ");
     String name = input.nextLine();
     
-    System.out.printf("%nHow many athletic teams do you have at your school?");
-    //input.nextLine();
+    System.out.printf("%nHow many athletic teams do you have at your school?  ");
+    teams = input.nextInt();
+    Team[] myTeams = new Team[teams];
     
+    for(int i = 1; i <= teams; i++){
+      
+    
+    
+    team.setTeam();
+    team.setCoach();
+    team.setTotalGames();
+    team.setWins();
+    
+
+    }
+    
+        displayTeamStats();
   }//END processWinsLosses()
   
   public void displayTeamStats()
@@ -51,6 +67,18 @@ System.out.printf("Thank you! Exiting program.");
     /**
      * see sample output on instructions
      */
+    System.out.printf("%nTEAMS WIN-LOSS RECORD FOR ACE HIGH SCHOOL");
+    
+    for(int i = 0; i <= teams; i++){
+    System.out.printf("%n%nTeam: %s"
+                        + "%nCoach: %s"
+                        + "%nTotal Games: %d"
+                        + "%nNo. of Wins: %d"
+                        
+                        , team.getTeam(), team.getCoach(),
+                      team.getTotalGames(), team.getWins());
+    
+    }//END for loop
   }//END displayTeamStats()
   
 }//END class
