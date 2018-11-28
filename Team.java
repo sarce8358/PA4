@@ -1,28 +1,48 @@
+import java.util.Scanner;
+
 public class Team
 {
-  public static void main(String [] args)
-  {
-  }//END main
+   private static Scanner input = new Scanner(System.in);
   
   //-------------------------------------declaring methods
   
   public void setTeam()
   {
-    
+    System.out.printf("%nEnter the team type:  ");
+    String teamType = input.nextLine();
   }//END setTeam()
   
   public void setCoach()
   {
-    
-  }//EDN setCoach()
+    System.out.printf("%nEnter the name of the coach: ");
+    String coachName = input.nextLine();
+  }//END setCoach()
   
   public void setTotalGames()
   {
-    
+    System.out.printf("%nEnter the total number of games played for the "
+                     + "%s team: ", );
   }//END setTotalGames()
   
   public void setWins()
   {
     
-  }//EDN setWins()
+  }//END setWins()
+  
+  
+  public void getTeam(){
+    
+  }
+  
+  public void getCoach(){
+    
+  }
+  
+  public void getTotalGames(){
+  
+  }
+  
+  public void setWins(){
+    
+  }
 }//END class
