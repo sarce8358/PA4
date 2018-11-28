@@ -3,7 +3,7 @@ public class TeamStats
   /**
    * create 1D array at the class level called myTeams at the class level as a null array the type will be Team
    */
- Team myTeams[] = null;
+private Team[] myTeams = null;
   
   //-------------------------------------declaring methods
   
