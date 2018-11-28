@@ -8,6 +8,7 @@ public class TeamStats
   private Team[] myTeams = null;
   private Team team = new Team();
   private static int teams = 0;
+  private String name = " ";
   
   //-------------------------------------declaring methods
   
@@ -41,7 +42,7 @@ System.out.printf("Thank you! Exiting program.  ");
      * myTeams array.
      */
     System.out.printf("%nWhat is the name of your school?  ");
-    String name = input.nextLine();
+    name = input.nextLine();
     
     System.out.printf("%nHow many athletic teams do you have at your school?  ");
     teams = input.nextInt();
@@ -67,9 +68,9 @@ System.out.printf("Thank you! Exiting program.  ");
     /**
      * see sample output on instructions
      */
-    System.out.printf("%nTEAMS WIN-LOSS RECORD FOR ACE HIGH SCHOOL");
+    System.out.printf("%nTEAMS WIN-LOSS RECORD FOR %S", name);
     
-    for(int i = 0; i <= teams; i++){
+    for(int i = 1; i <= teams; i++){
     System.out.printf("%n%nTeam: %s"
                         + "%nCoach: %s"
                         + "%nTotal Games: %d"
