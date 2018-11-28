@@ -20,7 +20,7 @@ public class Team
   public void setCoach()
   {
     System.out.printf("%nEnter the name of the coach: ");
-    coachName = input.nextLine();
+    coachName = input.nextLine().toLowerCase();
   }//END setCoach()
   
   public void setTotalGames()
