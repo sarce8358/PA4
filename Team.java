@@ -6,22 +6,22 @@ public class Team
   
   //-------------------------------------declaring methods
   
-  public void setTeam()
+  public String setTeam()
   {
     
   }//END setTeam()
   
-  public void setCoach()
+  public String setCoach()
   {
     
   }//EDN setCoach()
   
-  public void setTotalGames()
+  public int setTotalGames()
   {
     
   }//END setTotalGames()
   
-  public void setWins()
+  public int setWins()
   {
     
   }//EDN setWins()
